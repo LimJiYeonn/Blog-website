@@ -29,4 +29,6 @@ urlpatterns = [
     path("blog/add_blog/", blog.views.add_blog),
     path("blog/view_blog/<int:blog_id>/", blog.views.view_blog),
     path("blog/edit_blog_form/<int:blog_id>/", blog.views.edit_blog_form),
+    path("blog/edit_blog/", blog.views.edit_blog),
+    path("blog/remove_blog/<int:blog_id>/", blog.views.remove_blog),
 ]

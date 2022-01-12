@@ -31,3 +31,26 @@ def edit_blog_form(request, blog_id):
     b = Post.objects.get(id=blog_id)
     data = {"blog": b}
     return render(request, 'blog/edit_blog_form.html', data)
+
+
+def edit_blog(request):
+    input1 = request.POST.get("title")
+    input2 = request.POST.get("writer")
+    input3 = request.POST.get("content")
+    input4 = request.POST.get("id")
+
+    b = Post.objects.get(pk=int(input4))
+
+    b.title = input1
+    b.writer = input2
+    b.content = input3
+    b.save()
+
+    return redirect("/")
+
+
+def remove_blog(request, blog_id):
+    b = Post.objects.get(pk=blog_id)
+    b.delete()
+
+    return redirect("/")
