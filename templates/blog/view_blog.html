@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 1건 조회</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>제목</th>
+                <td>{{blog.title}}</td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td>{{blog.writer}}</td>
+            </tr>
+            <tr>
+                <th>내용</th>
+                <td>{{blog.content}}</td>
+            </tr>
+            <tr>
+                <th>작성자</th>
+                <td>{{blog.created_at}}</td>
+            </tr>
+            <tr>
+                <td><a href="/blog/edit_blog_form/{{blog.id}}/">수정</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
